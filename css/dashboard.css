@@ -1,0 +1,320 @@
+/* Основные стили dashboard */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.sidebar {
+    width: 280px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    color: #3b82f6;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #64748b;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.nav li a:hover {
+    background-color: #f8fafc;
+    color: #3b82f6;
+}
+
+.nav li a i {
+    width: 24px;
+    margin-right: 12px;
+    text-align: center;
+}
+
+.nav li.active a {
+    color: #3b82f6;
+    background-color: #eff6ff;
+    border-right: 3px solid #3b82f6;
+}
+
+.user-profile {
+    margin-top: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+.user-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    font-weight: 500;
+    flex: 1;
+}
+
+.logout {
+    color: #94a3b8;
+    transition: all 0.2s;
+}
+
+.logout:hover {
+    color: #3b82f6;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #1e293b;
+}
+
+.date {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.workouts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.workout-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    transition: all 0.2s;
+}
+
+.workout-card:hover {
+    background-color: #f1f5f9;
+}
+
+.workout-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+    margin-right: 15px;
+    background-color: #e0e7ff;
+    padding: 10px;
+    border-radius: 8px;
+    color: #3b82f6;
+}
+
+.workout-date .day {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.workout-date .month {
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+.workout-info {
+    flex: 1;
+}
+
+.workout-info h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    color: #1e293b;
+}
+
+.workout-info p {
+    margin: 0 0 5px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.exercises-count {
+    font-size: 13px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+}
+
+.exercises-count i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.workout-link {
+    color: #94a3b8;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.2s;
+}
+
+.workout-link:hover {
+    color: #3b82f6;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+.empty-state i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.empty-state p {
+    margin: 0 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,168 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Навигация */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Карточки упражнений */
+.exercise-card {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.exercise-card.selected {
+    border: 2px solid #007bff;
+}
+
+/* Трекер воды */
+.water-progress {
+    width: 150px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.water-progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #17a2b8;
+    transition: height 0.5s;
+}
+
+.water-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #333;
+}
+
+.water-buttons {
+    text-align: center;
+}
+
+/* Календарь */
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .water-progress {
+        width: 100px;
+        height: 200px;
+    }
+}
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #3498db;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-login, .btn-logout {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-login {
+    background-color: #3498db;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+}
+
+.username {
+    color: #ecf0f1;
+}
+
+/* Адаптивность для header */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .main-nav ul {
+        margin: 10px 0;
+    }
+    
+    .main-nav li {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,641 @@
+/* Общие стили */
+body {
+    padding-top: 80px;
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========== СТИЛИ ДЛЯ LIST.PHP ========== */
+.list-workouts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.list-workouts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.list-workouts-title {
+    font-size: 28px;
+    color: #2d3748;
+    margin: 0;
+}
+
+.list-btn-new-workout {
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.list-btn-new-workout:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+.list-workouts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.list-workout-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.list-workout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.list-workout-card-header {
+    padding: 15px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-workout-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #2d3748;
+}
+
+.list-workout-badge {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.list-workout-card-description {
+    padding: 15px;
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.list-workout-card-exercises {
+    padding: 15px;
+}
+
+.list-workout-exercise {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f1f5f9;
+}
+
+.list-workout-exercise:last-child {
+    border-bottom: none;
+}
+
+.list-exercise-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.list-exercise-sets-reps {
+    background: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.list-exercise-muscle-group {
+    color: #64748b;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.list-more-exercises {
+    text-align: center;
+    padding: 8px;
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.list-workout-card-footer {
+    padding: 15px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-workout-date {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.list-btn-view {
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: #4f46e5;
+}
+
+.list-btn-view:hover {
+    transform: scale(1.1);
+}
+
+.list-empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px dashed #e2e8f0;
+}
+
+.list-empty-state-icon {
+    font-size: 48px;
+    color: #cbd5e0;
+    margin-bottom: 20px;
+}
+
+.list-empty-state-text {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.list-btn-create-first {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.list-btn-create-first:hover {
+    background-color: #4338ca;
+}
+
+/* ========== СТИЛИ ДЛЯ VIEW.PHP ========== */
+.view-workout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.view-workout-container h1 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.view-workout-meta {
+    color: #64748b;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.view-workout-description {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    line-height: 1.6;
+    border-left: 4px solid #4f46e5;
+}
+
+.view-exercises-container {
+    margin-top: 40px;
+}
+
+.view-exercises-list {
+    margin-top: 20px;
+}
+
+.view-exercise-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.view-exercise-item:hover {
+    border-color: #cbd5e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.view-exercise-item h3 {
+    margin: 0 0 12px 0;
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.view-exercise-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 12px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.view-exercise-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view-exercise-description {
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.view-btn-start {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 14px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.view-btn-start:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(67, 56, 202, 0.2);
+}
+
+.view-exercise-step {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.view-btn-next {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.view-btn-next:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+.view-workout-complete {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.view-workout-complete h2 {
+    color: #2d3748;
+    margin-bottom: 25px;
+}
+
+.view-btn-main {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.view-btn-main:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .list-workouts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .list-workouts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .list-btn-new-workout {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .view-workout-container {
+        padding: 15px;
+        border-radius: 0;
+    }
+    
+    .view-exercise-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .view-exercise-step, .view-workout-complete {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}/* ========== СТИЛИ ДЛЯ CREATE.PHP ========== */
+.create-workout-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.create-workout-title {
+    color: #2d3748;
+    font-size: 24px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.create-form-group {
+    margin-bottom: 25px;
+}
+
+.create-form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3748;
+}
+
+.create-form-group input[type="text"],
+.create-form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.create-form-group input[type="text"] {
+    padding: 15px 1px;
+    border: 2px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.create-form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+    padding: 15px 1px;
+    border: 2px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.create-form-group input[type="text"]:focus,
+.create-form-group textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    background-color: white;
+}
+
+.create-exercise-selection {
+    margin-top: 30px;
+}
+
+.create-exercise-filters {
+    margin-bottom: 20px;
+}
+
+#create-exercise-search {
+    width: 100%;
+    padding: 12px 1px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.create-muscle-group-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.create-filter-btn {
+    padding: 8px 15px;
+    background: #e2e8f0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.create-filter-btn.active {
+    background: #4f46e5;
+    color: white;
+}
+
+.create-exercises-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.create-exercise-card {
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.create-exercise-card:hover {
+    border-color: #cbd5e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.create-exercise-select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.create-exercise-checkbox {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.create-exercise-title {
+    font-weight: 500;
+}
+
+.create-muscle-group {
+    color: #64748b;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+.create-sets-reps {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.create-form-group.small {
+    margin-bottom: 0;
+}
+
+.create-form-group.small label {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.create-small-input {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.create-exercise-details {
+    display: none;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.create-exercise-description {
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.create-btn-primary {
+    background: #4f46e5;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.create-btn-primary:hover {
+    background: #4338ca;
+}
+
+.create-error-message {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.create-form-group.has-error input,
+.create-form-group.has-error textarea {
+    border-color: #ef4444;
+}
+
+/* Адаптивность для create.php */
+@media (max-width: 768px) {
+    .create-workout-container {
+        padding: 20px;
+    }
+    
+    .create-sets-reps {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .create-small-input {
+        width: 100%;
+    }
+    
+    .create-muscle-group-filters {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .create-filter-btn {
+        white-space: nowrap;
+    }
+}

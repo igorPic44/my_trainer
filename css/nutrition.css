@@ -1,0 +1,317 @@
+/* Основные стили */
+.date-selector input,
+.date-selector button,
+.add-product-form select,
+.add-product-form input {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    outline: none;
+}
+
+.date-selector input:focus,
+.add-product-form select:focus,
+.add-product-form input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+.main-title{
+	
+}
+.date-selector button {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.date-selector button:hover {
+    background-color: #3a7bc8;
+}
+
+.add-product-form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.add-product-form label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-product-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+.submit-button {
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: span 2;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #3a7bc8;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4a90e2;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+p.empty-message {
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    color: #718096;
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Боковая панель - правая часть */
+.nutrition-sidebar {
+    width: 300px;
+    position: fixed;
+    right: 300px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Круговой индикатор калорий */
+.calorie-progress-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.calorie-circle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.calorie-circle-bg {
+    fill: none;
+    stroke: #e2e8f0;
+    stroke-width: 10;
+}
+
+.calorie-circle-fill {
+    fill: none;
+    stroke: #4a90e2;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dasharray 0.6s ease;
+}
+
+.calorie-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.calorie-amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.calorie-goal {
+    font-size: 16px;
+    color: #718096;
+}
+
+/* Карточка калорий */
+.calorie-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.calorie-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2d3748;
+    font-size: 20px;
+}
+
+/* Макросы */
+.macros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.macro-item {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.macro-name {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 5px;
+}
+
+.macro-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Настройки */
+.settings-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.settings-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2d3748;
+    font-size: 20px;
+    text-align: center;
+}
+
+.setting-row {
+    margin-bottom: 15px;
+}
+
+.setting-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.setting-row input {
+    width: 100%;
+    padding: 8px 1px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.save-settings-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.save-settings-button:hover {
+    background-color: #38a169;
+}
+
+/* Основной контент */
+.spacious-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.main-content {
+    width: calc(100% - 340px);
+    max-width: 900px;
+    margin-right: 340px;
+	
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 1200px) {
+    .nutrition-sidebar {
+        position: static;
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .add-product-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-button {
+        grid-column: span 1;
+    }
+}
